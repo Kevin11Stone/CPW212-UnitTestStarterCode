@@ -53,8 +53,32 @@ namespace CPW212_UnitTestStarterCode.Tests
 
         // TODO: Test Divide method with two valid numbers
         [TestMethod]
-        public void 
+        [DataRow(1, 5)]
+        [DataRow(-1, 5)]
+        [DataRow(-1, -5)]
+        public void Divide_TwoValidNumbers_ReturnsProduct(double num1, double num2)
+        {
+            // arrange
+            double expectedProduct = num1 / num2;
+
+            // assert/act
+            Assert.AreEqual(expectedProduct, SimpleMath.Divide(num1, num2));
+
+        }
 
         // TODO: Test subtract method with two valid numbers
+        [TestMethod]
+        [DataRow(1, 1)]
+        [DataRow(-1, -1)]
+        [DataRow(0, 1)]
+        [DataRow(2, 1)]
+        public void Subtract_TwoValidNumbers_ReturnsSum(double num1, double num2)
+        {
+            // arrange
+            double expectedProduct = num1 - num2;
+
+            // assert/act
+            Assert.AreEqual(expectedProduct, SimpleMath.Subtract(num1, num2));
+        }
     }
 }
