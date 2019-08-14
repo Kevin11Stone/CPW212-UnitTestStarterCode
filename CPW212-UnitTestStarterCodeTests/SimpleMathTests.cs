@@ -19,14 +19,25 @@ namespace CPW212_UnitTestStarterCode.Tests
         public void Add_TwoNumbers_ReturnsSum(double num1, double num2)
         {
             // Use the DataRow values to test the Add method
-            Assert.Fail();
+            double expectedSum = num1 + num2;
+
+            // assert with act
+            Assert.AreEqual( expectedSum, SimpleMath.Add(num1, num2));
         }
 
         [TestMethod]
         public void Multiply_TwoNumbers_ReturnsProduct()
         {
             // Use a few pairs of values to test the Multiply method
-            Assert.Fail();
+            double posTimesNeg = -10.00;
+            double negTimesNeg = 4;
+            double timesZero = 0;
+
+            // assert
+            Assert.AreEqual( posTimesNeg, SimpleMath.Multiply(5, -2) );
+            Assert.AreEqual(negTimesNeg, SimpleMath.Multiply(-2, -2));
+            Assert.AreEqual(timesZero, SimpleMath.Multiply(-2, 0));
+
         }
 
         [TestMethod]
@@ -34,10 +45,15 @@ namespace CPW212_UnitTestStarterCode.Tests
         {
             // Divide by zero should throw an argument exception with a message
             // "Denominator cannot be zero"
-            Assert.Fail();
+            double zero = 0;
+            double nonZero = -5;
+            Assert.ThrowsException<ArgumentException>(() =>
+                SimpleMath.Divide(nonZero, zero));
         }
 
         // TODO: Test Divide method with two valid numbers
+        [TestMethod]
+        public void 
 
         // TODO: Test subtract method with two valid numbers
     }
