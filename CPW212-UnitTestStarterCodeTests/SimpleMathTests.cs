@@ -35,8 +35,8 @@ namespace CPW212_UnitTestStarterCode.Tests
 
             // assert
             Assert.AreEqual( posTimesNeg, SimpleMath.Multiply(5, -2) );
-            Assert.AreEqual(negTimesNeg, SimpleMath.Multiply(-2, -2));
-            Assert.AreEqual(timesZero, SimpleMath.Multiply(-2, 0));
+            Assert.AreEqual( negTimesNeg, SimpleMath.Multiply(-2, -2) );
+            Assert.AreEqual( timesZero, SimpleMath.Multiply(-2, 0) );
 
         }
 
@@ -53,7 +53,15 @@ namespace CPW212_UnitTestStarterCode.Tests
 
         // TODO: Test Divide method with two valid numbers
         [TestMethod]
-        public void 
+        public void Divide_TwoValidNumbers_ReturnsProduct()
+        {
+            double validNumber1 = 2;
+            double validNumber2 = 5;
+
+            Assert.AreEqual();
+        }
+       
+      
 
         // TODO: Test subtract method with two valid numbers
     }
